@@ -15,7 +15,7 @@ func appMain(driver gxui.Driver) {
 	canvas := driver.CreateCanvas(math.Size{W: 800, H: 600})
 
 	for i := 0; i < 800; i++ {
-		var fy float64 = maths.Sin(float64(i) * (maths.Pi / 180))
+		var fy = maths.Sin(float64(i) * (maths.Pi / 180))
 		y := (int(fy*100) + 240)
 		plot(canvas, i, y)
 	}
